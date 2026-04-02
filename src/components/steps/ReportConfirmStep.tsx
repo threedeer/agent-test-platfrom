@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { FileText, Edit3, CheckCircle2, Info, AlertCircle, RefreshCw } from "lucide-react";
 import { cn } from "@/lib/utils";
 

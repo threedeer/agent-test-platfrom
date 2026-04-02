@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { 
   Globe, FileText, Briefcase, ChevronDown, ChevronUp, Plus, Trash2, 
   Layout, Info, Loader2, RefreshCw, Lock, ShieldCheck, ShieldAlert,
