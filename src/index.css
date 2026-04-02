@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #5E5CE6;
+  --color-primary: #007AFF;
+  --color-accent: #BF5AF2;
+  --color-accent-foreground: #ffffff;
+  --color-success: #34C759;
+  --color-warning: #FF9500;
+  --color-error: #FF3B30;
+  --color-muted: #8E8E93;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-surface: #ffffff;
+  --color-background: #F2F2F7;
+  
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Inter", system-ui, sans-serif;
+  --font-mono: "SF Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.08);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.04);
+  
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.75rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-slate-900 font-sans antialiased;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(94, 92, 230, 0.04) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(0, 122, 255, 0.03) 0px, transparent 50%);
+  }
+}
+
+@layer components {
+  .workbench-container {
+    @apply bg-white rounded-2xl border border-black/[0.05] shadow-sm overflow-hidden;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-2xl border border-white/40 shadow-glass;
+  }
+  
+  .btn-primary {
+    @apply px-4 py-2 bg-brand text-white rounded-xl font-semibold transition-all hover:opacity-90 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-white text-brand border border-black/[0.05] rounded-xl font-semibold transition-all hover:bg-slate-50 active:scale-[0.98] disabled:opacity-50 shadow-sm;
+  }
+
+  .input-base {
+    @apply w-full px-4 py-2 bg-slate-100/50 border border-transparent rounded-xl focus:outline-none focus:ring-2 focus:ring-brand/20 focus:bg-white focus:border-brand/30 transition-all;
+  }
+
+  .label-base {
+    @apply text-xs font-bold text-slate-500 uppercase tracking-wider mb-1.5 block;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-slate-200 rounded-full hover:bg-slate-300;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
