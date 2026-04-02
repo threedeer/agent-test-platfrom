@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la D:/AIProject/agent-test-platfrom/agent-test-platfrom/.env*)",
+      "Bash(npm install:*)"
+    ]
+  }
+}

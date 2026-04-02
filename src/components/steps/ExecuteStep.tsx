@@ -6,7 +6,7 @@ import {
   RotateCcw, FileDown, Eye, MoreHorizontal, ExternalLink, AlertOctagon,
   Filter, ArrowUpDown, Download, Info, Edit3, X
 } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { TestCase, ExecutionResult, StepStatus } from "@/types";
 import { StatusBadge } from "@/components/StatusBadge";
